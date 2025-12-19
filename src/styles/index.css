@@ -1,0 +1,13 @@
+/* Main CSS entry point - imports all modular styles */
+
+/* Base styles */
+@import './base.css';
+
+/* Animations */
+@import './animations.css';
+
+/* 3D Effects */
+@import './effects-3d.css';
+
+/* Utility classes */
+@import './utilities.css';

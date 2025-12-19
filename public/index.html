@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Raisers of Stars Consulting - Expert Financial Planning & Investment Services</title>
+  <meta name="description" content="Achieve your financial goals with Raisers of Stars Consulting. Expert financial planning, wealth management, and smart investment strategies tailored to your needs." />
+  <meta name="keywords" content="financial planning, wealth management, investment consulting, financial advisor, budgeting, savings plans, Kenya" />
+  <meta name="author" content="Raisers of Stars Consulting" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Raisers of Stars Consulting - Expert Financial Planning" />
+  <meta property="og:description" content="Professional financial consulting services to help you achieve your financial goals through smart investment and wealth management strategies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://raisersofstars.com" />
+  <meta property="og:image" content="https://raisersofstars.com/og-image.jpg" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Raisers of Stars Consulting - Expert Financial Planning" />
+  <meta name="twitter:description" content="Professional financial consulting services to help you achieve your financial goals." />
+  <meta name="twitter:image" content="https://raisersofstars.com/twitter-image.jpg" />
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://raisersofstars.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-blue': '#012A4A',
+            'brand-gold': '#F2B705',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "Raisers of Stars Consulting",
+    "description": "Professional financial consulting services including financial planning, wealth management, and investment strategies.",
+    "url": "https://raisersofstars.com",
+    "telephone": "0721609263",
+    "email": "patriciaj.mahinda@yahoo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KE"
+    },
+    "serviceType": [
+      "Financial Goal Setting",
+      "Wealth Management",
+      "Smart Investment",
+      "Personalized Financial Planning",
+      "Budgeting & Savings Plans"
+    ],
+    "areaServed": "Kenya",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Financial Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Financial Goal Setting",
+            "description": "Professional guidance to set and achieve your financial objectives"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Wealth Management",
+            "description": "Comprehensive wealth management strategies tailored to your needs"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Smart Investment",
+            "description": "Proven investment strategies to grow your wealth"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- React Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/",
+      "react": "https://aistudiocdn.com/react@^19.2.0"
+    }
+  }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/src/styles/index.css">
+</head>
+<body class="bg-brand-blue">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
