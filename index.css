@@ -1,0 +1,178 @@
+/* Base styles for the application */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #012A4A;
+  color: white;
+}
+
+/* Custom animations and utilities */
+@keyframes fade-in-scale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-scale {
+  animation: fade-in-scale 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* 3D Effects and Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-10px) rotateX(2deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(242, 183, 5, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(242, 183, 5, 0.6); }
+}
+
+@keyframes slide-in-3d {
+  from {
+    transform: translateX(-100px) rotateY(-15deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes card-hover {
+  from { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+  to { transform: translateY(-8px) rotateX(5deg) rotateY(2deg); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.slide-in-3d {
+  animation: slide-in-3d 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  perspective: 1000px;
+}
+
+.card-3d:hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(2deg);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(242, 183, 5, 0.1);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.depth-shadow {
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.deep-shadow {
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.25),
+    0 12px 24px rgba(0, 0, 0, 0.15),
+    0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #F2B705;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #012A4A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F2B705;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d49e04;
+}
+
+/* Responsive 3D effects */
+@media (max-width: 768px) {
+  .card-3d:hover {
+    transform: translateY(-4px) rotateX(2deg) rotateY(1deg);
+  }
+
+  .float-animation {
+    animation-duration: 8s;
+  }
+}
+
+/* Performance optimizations */
+.card-3d,
+.glass-effect,
+.float-animation {
+  will-change: transform;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .float-animation,
+  .pulse-glow,
+  .slide-in-3d {
+    animation: none;
+  }
+
+  .card-3d:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Enhanced glass morphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #F2B705, #FFD700, #F2B705);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
